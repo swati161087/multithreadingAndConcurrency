@@ -16,7 +16,7 @@ public class PrintNumber implements Runnable{
     @Override
     public void run() {
         synchronized (lock) {
-            while (counter.getTrack() != 100*this.totalThreads ) {
+            while (counter.getTrack() != counter.getMaxNoTobePrinted()*this.totalThreads ) {
 
                 String currentThread = Thread.currentThread().getName();
                 String chanceThread = "Thread-" + (counter.getTrack() % totalThreads);

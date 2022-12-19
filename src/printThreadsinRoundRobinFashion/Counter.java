@@ -5,6 +5,15 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Counter {
     private AtomicInteger val=new AtomicInteger(0);
     private AtomicInteger track=new AtomicInteger(0);
+    private int MaxNoTobePrinted;
+
+    public int getMaxNoTobePrinted() {
+        return MaxNoTobePrinted;
+    }
+
+    public void setMaxNoTobePrinted(int maxNoTobePrinted) {
+        MaxNoTobePrinted = maxNoTobePrinted;
+    }
 
     public  void  printVal(){
         System.out.println(this.getVal());

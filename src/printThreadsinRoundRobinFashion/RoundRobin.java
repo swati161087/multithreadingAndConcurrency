@@ -3,6 +3,7 @@ package printThreadsinRoundRobinFashion;
 public class RoundRobin {
     public static void main(String[] args) {
         Counter counter=new Counter();
+        counter.setMaxNoTobePrinted(10000);
         int totalThread=4;
         Object lock=new Object();
         Thread t1=new Thread(new PrintNumber(counter,totalThread,lock));
